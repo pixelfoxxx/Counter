@@ -17,9 +17,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         counterView.text = "\(count)"
-
+        plusButton.backgroundColor = .red
+        minusButton.backgroundColor = .blue
     }
 
     @IBAction func plusButtonTap(_ sender: Any) {
