@@ -9,11 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var counterView: UILabel!
+    @IBOutlet weak var plusButton: UIButton!
+    
+    private var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        counterView.text = "\(count)"
+
     }
 
-
+    @IBAction func plusButtonTap(_ sender: Any) {
+        
+        count += 1
+        counterView.text = "\(count)"
+        
+    }
+    
 }
 
