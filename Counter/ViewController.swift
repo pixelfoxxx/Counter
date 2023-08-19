@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var counterView: UILabel!
     @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet weak var minusButton: UIButton!
     
     private var count = 0
     
@@ -28,5 +29,14 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func minusButtonTap(_ sender: Any) {
+        
+        if count <= 0 {
+            count = 0
+        } else {
+            count -= 1
+            counterView.text = "\(count)"
+        }
+    }
 }
 
